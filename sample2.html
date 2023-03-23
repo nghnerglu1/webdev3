@@ -6,8 +6,9 @@
     <title>Bootstrap demo</title>
   
 <style>
+     
      .b-example-divider {
-        height: 3rem;
+        height: 10rem;
         background-color: rgba(0, 0, 0, .1);
         border: solid rgba(0, 0, 0, .15);
         border-width: 1px 0;
@@ -17,7 +18,86 @@
         vertical-align: -.125em;
         fill: currentColor;
       }
-      
+      .dropdown-menu {
+  margin: 100rem;
+}
+
+.dropdown-item-danger {
+  color: var(--bs-red);
+}
+.dropdown-item-danger:hover,
+.dropdown-item-danger:focus {
+  color: #fff;
+  background-color: var(--bs-red);
+}
+.dropdown-item-danger.active {
+  background-color: var(--bs-red);
+}
+
+.btn-hover-light {
+  background-color: var(--bs-white);
+}
+.btn-hover-light:hover,
+.btn-hover-light:focus {
+  color: var(--bs-blue);
+  background-color: var(--bs-light);
+}
+
+.cal-month,
+.cal-days,
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+}
+.cal-month-name {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  text-align: center;
+}
+.cal-weekday,
+.cal-btn {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  padding: 0;
+}
+.cal-btn:not([disabled]) {
+  font-weight: 500;
+}
+.cal-btn:hover,
+.cal-btn:focus {
+  background-color: rgba(0, 0, 0, .05);
+}
+.cal-btn[disabled] {
+  border: 0;
+  opacity: .5;
+}
+
+.form-control-dark {
+  background-color: #49dba30d;
+  border-color: rgba(196, 18, 18, 0.15);
+}
+
+
+.w-220px {
+  width: 220px;
+}
+
+.w-280px {
+  width: 280px;
+}
+
+.w-340px {
+  width: 600px;
+}
+
+.w-600px {
+  width: 600px;
+}
+
       
 
 </style>
@@ -252,6 +332,185 @@
                 </a>
               </li>
             </ul>
+          </div>
+          <div class="b-example-divider"></div>
+          <div class="dropdown-menu d-block position-static p-2 shadow rounded-3 w-340px">
+            <div class="d-grid gap-1">
+              <div class="cal">
+                <div class="cal-month">
+                  <button class="btn cal-btn" type="button">
+                    <svg class="bi" width="16" height="16"><use xlink:href="#arrow-left-short"></use></svg>
+                  </button>
+                  <strong class="cal-month-name">haziran</strong>
+                  <select class="form-select cal-month-name d-none">
+                    <option value="January">ocak</option>
+                    <option value="February">şubat</option>
+                    <option value="March">mart</option>
+                    <option value="April">nisan</option>
+                    <option value="May">Mayıs</option>
+                    <option selected="" value="June">haziran</option>
+                    <option value="July">temmuz</option>
+                    <option value="August">ağustos</option>
+                    <option value="September">eylul</option>
+                    <option value="October">ekim</option>
+                    <option value="November">kasım</option>
+                    <option value="December">aralık</option>
+                  </select>
+                  <button class="btn cal-btn" type="button">
+                    <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-short"></use></svg>
+                  </button>
+                </div>
+                <div class="cal-weekdays text-muted">
+                  <div class="cal-weekday">pazar</div>
+                  <div class="cal-weekday">pazartesi</div>
+                  <div class="cal-weekday">salı</div>
+                  <div class="cal-weekday">çarşamba</div>
+                  <div class="cal-weekday">perşembe</div>
+                  <div class="cal-weekday">cuma</div>
+                  <div class="cal-weekday">cumartesi</div>
+                </div>
+                <div class="cal-days">
+                  <button class="btn cal-btn" disabled="" type="button">30</button>
+                  <button class="btn cal-btn" disabled="" type="button">31</button>
+          
+                  <button class="btn cal-btn" type="button">1</button>
+                  <button class="btn cal-btn" type="button">2</button>
+                  <button class="btn cal-btn" type="button">3</button>
+                  <button class="btn cal-btn" type="button">4</button>
+                  <button class="btn cal-btn" type="button">5</button>
+                  <button class="btn cal-btn" type="button">6</button>
+                  <button class="btn cal-btn" type="button">7</button>
+          
+                  <button class="btn cal-btn" type="button">8</button>
+                  <button class="btn cal-btn" type="button">9</button>
+                  <button class="btn cal-btn" type="button">10</button>
+                  <button class="btn cal-btn" type="button">11</button>
+                  <button class="btn cal-btn" type="button">12</button>
+                  <button class="btn cal-btn" type="button">13</button>
+                  <button class="btn cal-btn" type="button">14</button>
+          
+                  <button class="btn cal-btn" type="button">15</button>
+                  <button class="btn cal-btn" type="button">16</button>
+                  <button class="btn cal-btn" type="button">17</button>
+                  <button class="btn cal-btn" type="button">18</button>
+                  <button class="btn cal-btn" type="button">19</button>
+                  <button class="btn cal-btn" type="button">20</button>
+                  <button class="btn cal-btn" type="button">21</button>
+          
+                  <button class="btn cal-btn" type="button">22</button>
+                  <button class="btn cal-btn" type="button">23</button>
+                  <button class="btn cal-btn" type="button">24</button>
+                  <button class="btn cal-btn" type="button">25</button>
+                  <button class="btn cal-btn" type="button">26</button>
+                  <button class="btn cal-btn" type="button">27</button>
+                  <button class="btn cal-btn" type="button">28</button>
+          
+                  <button class="btn cal-btn" type="button">29</button>
+                  <button class="btn cal-btn" type="button">30</button>
+                  <button class="btn cal-btn" type="button">31</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-menu d-block position-static p-2 shadow rounded-3 w-340px">
+            <div class="d-grid gap-1">
+              <div class="cal">
+                <div class="cal-month">
+                  <button class="btn cal-btn" type="button">
+                    <svg class="bi" width="16" height="16"><use xlink:href="#arrow-left-short"></use></svg>
+                  </button>
+                  <strong class="cal-month-name">temmuz</strong>
+                  <select class="form-select cal-month-name d-none">
+                    <option value="January">ocak</option>
+                    <option value="February">şubat</option>
+                    <option value="March">mart</option>
+                    <option value="April">nisan</option>
+                    <option value="May">mayıs</option>
+                    <option selected="" value="June">haziran</option>
+                    <option value="July">temmuz</option>
+                    <option value="August">ağustos</option>
+                    <option value="September">eylul</option>
+                    <option value="October">ekim</option>
+                    <option value="November">kasım</option>
+                    <option value="December">aralık</option>
+                  </select>
+                  <button class="btn cal-btn" type="button">
+                    <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-short"></use></svg>
+                  </button>
+                </div>
+                <div class="cal-weekdays text-muted">
+                  <div class="cal-weekday">pazar</div>
+                  <div class="cal-weekday">pazartesi</div>
+                  <div class="cal-weekday">salı</div>
+                  <div class="cal-weekday">çarşamba</div>
+                  <div class="cal-weekday">perşembe</div>
+                  <div class="cal-weekday">cuma</div>
+                  <div class="cal-weekday">cumartesi</div>
+                </div>
+                <div class="cal-days">
+                  <button class="btn cal-btn" disabled="" type="button">30</button>
+                  <button class="btn cal-btn" disabled="" type="button">31</button>
+          
+                  <button class="btn cal-btn" type="button">1</button>
+                  <button class="btn cal-btn" type="button">2</button>
+                  <button class="btn cal-btn" type="button">3</button>
+                  <button class="btn cal-btn" type="button">4</button>
+                  <button class="btn cal-btn" type="button">5</button>
+                  <button class="btn cal-btn" type="button">6</button>
+                  <button class="btn cal-btn" type="button">7</button>
+          
+                  <button class="btn cal-btn" type="button">8</button>
+                  <button class="btn cal-btn" type="button">9</button>
+                  <button class="btn cal-btn" type="button">10</button>
+                  <button class="btn cal-btn" type="button">11</button>
+                  <button class="btn cal-btn" type="button">12</button>
+                  <button class="btn cal-btn" type="button">13</button>
+                  <button class="btn cal-btn" type="button">14</button>
+          
+                  <button class="btn cal-btn" type="button">15</button>
+                  <button class="btn cal-btn" type="button">16</button>
+                  <button class="btn cal-btn" type="button">17</button>
+                  <button class="btn cal-btn" type="button">18</button>
+                  <button class="btn cal-btn" type="button">19</button>
+                  <button class="btn cal-btn" type="button">20</button>
+                  <button class="btn cal-btn" type="button">21</button>
+          
+                  <button class="btn cal-btn" type="button">22</button>
+                  <button class="btn cal-btn" type="button">23</button>
+                  <button class="btn cal-btn" type="button">24</button>
+                  <button class="btn cal-btn" type="button">25</button>
+                  <button class="btn cal-btn" type="button">26</button>
+                  <button class="btn cal-btn" type="button">27</button>
+                  <button class="btn cal-btn" type="button">28</button>
+          
+                  <button class="btn cal-btn" type="button">29</button>
+                  <button class="btn cal-btn" type="button">30</button>
+                  <button class="btn cal-btn" type="button">31</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="b-example-divider"></div>
+          <div class="dropdown-menu position-static d-flex align-items-stretch p-3 rounded-3 shadow-lg w-600px">
+            <nav class="d-grid gap-2 col-8">
+              <a href="#" class="btn btn-hover-light rounded-2 d-flex align-items-center gap-3 py-2 px-3 lh-sm text-start">
+                <svg class="bi" width="32" height="32"><use xlink:href="#image-fill"></use></svg>
+                <div>
+                  <strong class="d-block">Özellikler</strong>
+                  <small>urune bir göz atın</small>
+                </div>
+              </a>
+              <a href="#" class="btn btn-hover-light rounded-2 d-flex align-items-center gap-3 py-2 px-3 lh-sm text-start">
+                <svg class="bi" width="32" height="32"><use xlink:href="#question-circle"></use></svg>
+                <div>
+                  <strong class="d-block">Yardım</strong>
+                  <small>Destek ekibimizden yardım alın</small>
+                </div>
+              </a>
+            </nav>
+            <div class="col-4">
+              ...
+            </div>
           </div>
         
             <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
